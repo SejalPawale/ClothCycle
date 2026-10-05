@@ -24,7 +24,6 @@ ClothCycle is a sustainable clothing platform that gives unwanted clothes a seco
 - **PWA:** Service Worker + Web App Manifest
 - **Android:** Capacitor (the web app is bundled inside the APK)
 - **Hosting:** Render (backend API and website)
-- **CI:** GitHub Actions (APK build)
 - **Version Control:** Git & GitHub
 
 The application follows a simple **client → REST API → database** architecture. The frontend talks to the API for the catalogue, user state, donations, recycling, rentals, rewards, checkout, and admin data.
@@ -36,17 +35,13 @@ clothcycle/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── static/
-│   ├── index.html
-│   ├── styles.css
-│   ├── app.js
-│   ├── sw.js
-│   ├── manifest.json
-│   ├── images/          # product photos (named after each item)
-│   └── icons/
-└── .github/
-    └── workflows/
-        └── build-apk.yml
+└── static/
+    ├── index.html
+    ├── styles.css
+    ├── app.js
+    ├── sw.js
+    ├── manifest.json
+    └── icons/
 ```
 
 ## CyclePoints
@@ -95,7 +90,7 @@ App data (catalogue, cart, wishlist, donations, points, coupons) is fetched from
 
 - **App ID:** `com.clothcycle.app`
 - **Permissions:** Internet only. "Use my location" in Nearby uses the device's location when you grant it.
-- **Build output:** `app-debug.apk` (debug build, built through GitHub Actions)
+- **Build output:** `app-debug.apk` (debug build)
 
 ## Sustainability
 
